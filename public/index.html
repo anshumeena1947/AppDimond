@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="FF Dimonds">
+<meta name="apple-mobile-web-app-title" content="FF Dimonds">
+<meta name="theme-color" content="#3791DF">
+<meta name="msapplication-navbutton-color" content="#3791DF">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/index.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192x192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/img/icon-192x192.png">
+</head>
+<body>
+    <h1>welcome in dimond app</h1>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+<script>
+    var userID = localStorage.getItem('userID');
+    console.log(userID)
+    if (userID){
+        window.location.replace('/app.html');
+    }
+    else {
+        window.location.replace('/login.html');
+    }
+</script>
+</html>

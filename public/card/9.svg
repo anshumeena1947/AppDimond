@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<defs>
+		<image width="256" height="256" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAAAXNSR0IB2cksfwAAAANQTFRF9O30RLddcgAAAB9JREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAL4NIQAAAfFnIe4AAAAASUVORK5CYII="/>
+		<image width="48" height="40" id="img2" href="data:image/png;base64,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"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.txt0 { font-size: 42px;fill: #000000;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+		.txt1 { font-size: 72px;fill: #000000;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+	<use id="Layer 1" href="#img2" x="104" y="38" />
+	<text id="Dimonds " style="transform: matrix(1,0,0,1,38,205)" >
+		<tspan x="0" y="0" class="txt0">Dimonds</tspan>
+	</text>
+	<text id="3 " style="transform: matrix(1,0,0,1,106,153)" >
+		<tspan x="0" y="0" class="txt1">9</tspan>
+	</text>
+</svg>
