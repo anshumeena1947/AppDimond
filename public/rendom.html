@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rendom -- domondapp</title>
+</head>
+
+<body>
+    <style>
+        .app-iamge>img {
+            height: 156px;
+            width: 156px;
+            text-align: center;
+            margin-left: 30%;
+        }
+
+        .cards {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .redeem-btn {
+            height: 30px !important;
+            width: 100px !important;
+            background-color: rgb(68, 245, 136);
+            border: none;
+            margin: 10px;
+            color: white;
+            font-size: medium;
+        }
+
+        #userFid {
+            margin: 10px;
+            height: 30px;
+            width: 220px !important;
+
+        }
+
+        div.card1 {
+            margin-top: 10px !important;
+            background-color: rgb(17, 17, 17);
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+    <div class="app-iamge">
+        <img src="/img/Dimond.webp" alt="">
+    </div>
+    <div class="cards">
+        <div class="card1">
+            <h2>1000</h2>
+            <p>get 500 Free Fire diamonds for 1000 coins in app</p>
+            <input type="text" name="userFid" id="userFid" placeholder="enter your free fire id">
+            <button class="redeem-btn" onclick="checkCard1Valid()">redeem</button>
+        </div>
+        <div class="card1">
+            <h2>1500</h2>
+            <p>get 500 Free Fire diamonds for 1000 coins in app</p>
+            <input type="text" name="userFid" id="userFid" placeholder="enter your free fire id">
+            <button class="redeem-btn" onclick="checkCard2Valid()">redeem</button>
+        </div>
+        <div class="card1">
+            <h2>6000</h2>
+            <p>get 500 Free Fire diamonds for 1000 coins in app</p>
+            <input type="text" name="userFid" id="userFid" placeholder="enter your free fire id">
+            <button class="redeem-btn" onclick="checkCard3Valid()">redeem</button>
+        </div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyDiiG8cIwuw0QHMIVBCeaC1JSMPbZoh9Ts",
+        authDomain: "dimondapp-60136.firebaseapp.com",
+        databaseURL: "https://dimondapp-60136-default-rtdb.firebaseio.com",
+        projectId: "dimondapp-60136",
+        storageBucket: "dimondapp-60136.appspot.com",
+        messagingSenderId: "326330674620",
+        appId: "1:326330674620:web:2b99557001e906f3080fb9",
+        measurementId: "G-DMP394EJYL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    var database = firebase.database();
+    var userID = localStorage.getItem('userID');
+    function checkCard1Valid() {
+        var userCoins = Number(localStorage.getItem('UserCoins'));
+        if (userCoins >= 1000) {
+            alert('ok tranfer your diamonds in your account within 2 working days')
+            database.ref('users/' + userID).set({
+                coins: userCoins - 1000
+            });
+        }
+        else {
+            window.alert('you need ' + (1000 - userCoins) + ' to redeem');
+
+        }
+    }
+    function checkCard2Valid() {
+        var userCoins = Number(localStorage.getItem('UserCoins'));
+        if (userCoins >= 1500) {
+            alert('ok tranfer your diamonds in your account within 2 working days')
+            database.ref('users/' + userID).set({
+                coins: userCoins - 1500
+            });
+        }
+        else {
+            window.alert('you need ' + (1500 - userCoins) + ' to redeem');
+
+        }
+    }
+    function checkCard3Valid() {
+        var userCoins = Number(localStorage.getItem('UserCoins'));
+        if (userCoins >= 6000) {
+            alert('ok tranfer your diamonds in your account within 2 working days')
+            database.ref('users/' + userID).set({
+                coins: userCoins - 6000
+            });
+        }
+        else {
+            window.alert('you need ' + (6000 - userCoins) + ' to redeem');
+
+        }
+    }
+</script>
+
+</html>

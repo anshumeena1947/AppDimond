@@ -38,13 +38,13 @@ header{
     margin-top: 10px;
 }
 .btns{
-    margin-top: 80px;
+    margin-top: 200px;
     margin-left: 50px;
 }
 .collect{
     height: 50px;
     width: 280px;
-    background-color: purple;
+    background-color: rgb(67, 49, 228);
     border: none;
     border-radius: 10px;
     color: white;
@@ -54,7 +54,7 @@ header{
     margin-top: 10px;
     height: 50px;
     width: 120px;
-    background-color: purple;
+    background-color: rgb(67, 49, 228);
     border: none;
     border-radius: 10px;
     color: white;
@@ -64,7 +64,7 @@ header{
     margin-top: 10px;
     height: 50px;
     width: 140px;
-    background-color: purple;
+    background-color: rgb(67, 49, 228);
     border: none;
     border-radius: 10px;
     color: white;

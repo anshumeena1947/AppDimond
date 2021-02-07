@@ -22,6 +22,7 @@ var firebaseDB = database.ref('users/'+userID).child('coins');
 firebaseDB.on('value', snap => setTimeout(totalUserCoins = snap.val(), 3000));
 function assignTotalCoins(){
   HTMLcoins.innerText = totalUserCoins;
+  localStorage.setItem('UserCoins',totalUserCoins);
 }
 setTimeout(() => {
   console.log("i am runig")
@@ -40,7 +41,7 @@ function RendomImg(a){
 function Dimond(){
   rendomNumberassin();
   $('#elem').wScratchPad({
-    size        : 100,          // The size of the brush/scratch.
+    size        : 90,          // The size of the brush/scratch.
     bg          : RendomImg(globalRendomNumber),  // Background (image path or hex color).
     fg          : '#6699ff',  // Foreground (image path or hex color).
   });
