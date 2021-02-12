@@ -2,7 +2,7 @@
     "name": "Free FIre Dimonds",
     "short_name": "FF Dimonds",
     "lang": "en-US",
-    "start_url": "/app.html",
+    "start_url": "/index.html",
     "display": "standalone",
     "orientation": "portrait",
     "scope":"/app.html",
