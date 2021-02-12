@@ -55,6 +55,9 @@ function collect(){
   database.ref('users/' + userID).set({
     coins: tempNumber
   });
+  let LocalUserCoins = localStorage.getItem('UserCoins');
+  let LocalUserC = LocalUserCoins+tempNumber;
+  localStorage.setItem('UserCoins',LocalUserC);
   window.location.reload();
 
 }
