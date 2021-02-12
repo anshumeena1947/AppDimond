@@ -21,9 +21,10 @@ console.log(userID)
 var firebaseDB = database.ref('users/'+userID).child('coins');
 firebaseDB.on('value', snap => setTimeout(totalUserCoins = snap.val(), 3000));
 function assignTotalCoins(){
-  HTMLcoins.innerText = totalUserCoins;
   localStorage.setItem('UserCoins',totalUserCoins);
+  HTMLcoins.innerText = localStorage.getItem('UserCoins');
 }
+HTMLcoins.innerText = localStorage.getItem('UserCoins');
 setTimeout(() => {
   console.log("i am runig")
   assignTotalCoins();
