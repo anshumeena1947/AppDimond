@@ -39,8 +39,8 @@ header{
 }
 .btns{
     margin-top: 150px;
-    left: 15%;
-    right: 15%;
+    margin-left: 15%;
+    margin-right: 9%;
     width: 256px;
 }
 .collect{
@@ -74,5 +74,5 @@ header{
 
 }
 .sec-btn{
-    margin-left: 10px;
+    margin-left: 0px;
 }
