@@ -41,7 +41,7 @@ header{
     margin-top: 150px;
     margin-left: 13%;
     margin-right: 11%;
-    width: 256px;
+    width: 266px;
 }
 .collect{
     height: 50px;
@@ -65,7 +65,7 @@ header{
 .share{
     margin-top: 10px;
     height: 50px;
-    width: 140px;
+    width: 130px;
     background-color: rgb(67, 49, 228);
     border: none;
     border-radius: 10px;
